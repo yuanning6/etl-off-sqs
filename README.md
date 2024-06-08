@@ -28,6 +28,10 @@ This application reads JSON data from an AWS SQS Queue, masks PII data, transfor
 
     ```sh
     python -m venv venv
+
+    or
+
+    python3 -m venv venv (if using Python 3)
     ```
 
     - Activate on Windows:
@@ -50,6 +54,8 @@ This application reads JSON data from an AWS SQS Queue, masks PII data, transfor
     ```sh
     docker-compose up
     ```
+
+    If encounter the error: Bind for 0.0.0.0:5432 failed: port is already allocated, stop the container running on port 5432.
 
 ## Running the Application
 
