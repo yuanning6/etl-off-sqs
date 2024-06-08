@@ -20,8 +20,8 @@ This application reads JSON data from an AWS SQS Queue, masks PII data, transfor
 1. Clone the repository:
 
     ```sh
-    git clone <repository-url>
-    cd <repository-name>
+    git clone https://github.com/yuanning6/etl-off-sqs.git
+    cd etl-off-sqs
     ```
 
 2. Create and activate a virtual environment:
@@ -59,7 +59,7 @@ Run the ETL script:
     python main.py
     ```
 
-## Explanation of PII Masking and Version Conversion
+## Explanation of PII Masking and Version String Conversion
 
 ### PII Masking
 
@@ -97,7 +97,7 @@ To make this application ready for production, I would add:
 - Set up **auto-scaling** for both the application and the database to handle more load as it comes in.
 - Include thorough unit and integration **tests** to catch issues early and ensure everything works as expected.
 
-#### How can this application scale with a growing dataset?
+### How can this application scale with a growing dataset?
 
 The application can scale with a growing dataset by:
 
@@ -106,11 +106,11 @@ The application can scale with a growing dataset by:
 - Implement **sharding or partitioning** strategies in the database to handle large volumes of data efficiently.
 - Utilize the inherent scalability of Amazon SQS to handle an increasing number of messages.
 
-#### How can PII be recovered later on?
+### How can PII be recovered later on?
 
 To recover PII later on, we would need to securely store the original PII data in a separate, encrypted database. The masked data should be linked to the original data in a way that allows for reverse lookup when necessary. Access to this data should be tightly controlled, with strict access policies and audit logging to track who accessed the data and when.
 
-#### What are the assumptions you made?
+### What are the assumptions you made?
 
 - The JSON messages in the SQS queue follow a consistent structure.
 - The Localstack and Postgres services are correctly configured via Docker.
