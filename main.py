@@ -37,7 +37,6 @@ def version_to_int(version):
     
     return (major << (max_bits * 2)) | (minor << max_bits) | patch
 
-
 # Function to process and insert message into Postgres
 def process_message(message):
     data = json.loads(message['Body'])
