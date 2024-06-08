@@ -60,10 +60,8 @@ This application reads JSON data from an AWS SQS Queue, masks PII data, transfor
 ## Running the Application
 
 Run the ETL script:
-
-    ```
+    
     python main.py
-    ```
 
 ## Explanation of PII Masking and Version String Conversion
 
