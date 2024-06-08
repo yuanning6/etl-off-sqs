@@ -61,7 +61,7 @@ This application reads JSON data from an AWS SQS Queue, masks PII data, transfor
 
 Run the ETL script:
 
-    ```sh
+    ```
     python main.py
     ```
 
